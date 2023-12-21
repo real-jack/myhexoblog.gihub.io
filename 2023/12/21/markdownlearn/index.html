@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | jack-hxb</title>
+    <title>markdownlearn | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
@@ -31,6 +31,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -152,67 +156,90 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>markdownlearn</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/12/21
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                个人学习
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
             
-<div id="archives">
-    
-    <div id="timeline-wrap" ref="timeline">
-        
-        <div class="timeline" data-title="hello，guests！">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/12/20</div>
-                <a href="/2023/12/20/hello-world/">
-                    <h3>Hello，Guests！</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="markdownlearn">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/12/21</div>
-                <a href="/2023/12/21/markdownlearn/">
-                    <h3>markdownlearn</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            个人学习
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/hexo/" style="color: #ffa2c4">hexo</a>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">学习</a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+            
+            <span class="tag">
+                
+                <a href="/tags/hexo/" style="color: #00bcd4">hexo</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">学习</a>
+            </span>
+            
+        </span>
         
     </div>
+    
+    <div class="content" v-pre>
+        <p>学习一下markdown语法的入门</p>
+<span id="more"></span>
+
+<p>##各种格式</p>
+<p>###超链接</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/">b站</a></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">自动链接：我的博客地址&lt;<span class="symbol">https:</span>/<span class="regexp">/real-jack.github.io/</span>&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>列表项1</li>
+<li>列表项2</li>
+<li>列表项3</li>
+</ul>
+<p>！<a href="/img/%E5%A4%A7%E5%96%9C.jpg"></a></p>
+<table>
+<thead>
+<tr>
+<th>同学</th>
+<th>性别</th>
+<th>爱听的歌</th>
+<th>爱吃的饭</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>左对齐</td>
+<td>默认左对齐</td>
+<td>居中对齐</td>
+<td>右对齐</td>
+</tr>
+</tbody></table>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
             <footer id="footer">
@@ -243,6 +270,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
