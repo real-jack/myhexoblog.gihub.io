@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Hello，Guests！ | jack-hxb</title>
+    <title>hexo系列问题之我们换了电脑怎么办 | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
@@ -158,14 +158,14 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Hello，Guests！</h1>
+        <h1>hexo系列问题之我们换了电脑怎么办</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/12/20
+            2023/12/25
         </span>
         
         <span class="category">
@@ -186,7 +186,12 @@
             
             <span class="tag">
                 
-                <a href="../../../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
+                <a href="../../../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="../../../../tags/hexo/" style="color: #03a9f4">hexo</a>
             </span>
             
         </span>
@@ -194,23 +199,51 @@
     </div>
     
     <div class="content" v-pre>
-        <p>欢迎来到 <a href="https://real-jack.github.io/">real-jack</a>! 这是我的第一个博客。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>快速上手</p>
+        <p>学习一下换电脑了，hexo怎么修改</p>
 <span id="more"></span>
 
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h4 id="参考的播主：http-www-xiaolongwu-cn"><a href="#参考的播主：http-www-xiaolongwu-cn" class="headerlink" title="参考的播主：http://www.xiaolongwu.cn"></a>参考的播主：<a target="_blank" rel="noopener" href="http://www.xiaolongwu.cn/">http://www.xiaolongwu.cn</a></h4><p>这个问题是我刚开始建站的时候就想到的问题，只是一直没时间做这些，最近有点时间了，处理一下这个问题</p>
+<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>我们如果换了电脑怎么办？我们把hexo文件从一个电脑cope到另外一个电脑吗?答案肯定不是这样的，因为这里面有好多依赖包，好几万个文件呢，这样显然不合理</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>我们初步的解决方案是把我们的文件提交到git上，利用git来管理它，我是这样解决的</p>
+<ol>
+<li><p>在现有的XXX.github.io项目上创建一个分支来管理</p>
+</li>
+<li><p>具体实现步骤：</p>
+<ol>
+<li>克隆gitHub上的XXX.github.io项目的文件到本地</li>
+</ol>
+ <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/yourname/xxx.github.io.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<p>Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<ol start="2">
+<li><p>删除文件夹里除了.git的其他所有文件</p>
+</li>
+<li><p>把hexo项目文件下的所有文件全部复制过来</p>
+</li>
+<li><p>里面应该有一个叫.gitignore的文件，如果没有就输入 touch .gitignore，创建一个</p>
+</li>
+<li><p>.gitignore文件里应该是这些内容</p>
+ <figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">.DS_Store</span></span><br><span class="line">Thumbs<span class="number">.</span><span class="built_in">db</span></span><br><span class="line"><span class="built_in">db</span><span class="number">.</span>json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line"><span class="meta">public</span>/</span><br><span class="line"><span class="meta">.deploy</span>*/</span><br></pre></td></tr></table></figure></li>
+<li><p>创建一个叫hexo的分支并切换到这个分支上</p>
+ <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> hexo</span><br></pre></td></tr></table></figure></li>
+<li><p>提交复制过来的文件到暂存区</p>
+ <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span> <span class="comment">--all</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交 </p>
+ <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">&quot;新建分支资源文件&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>推送分支到github</p>
+ <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">push</span> --<span class="keyword">set</span>-upstream origin hexo</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p> 到这一步我们就基本上搞定了，以后再跟新了博客就直接 git push就可以了，hexo的操作跟以前一样不变。</p>
+</li>
+<li><p>今后无论什么时候想要在其他电脑上面用hexo写博客，就直接把创建的分支克隆下来，npm install安装依赖之后就可以用了。</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//克隆分支的操作</span></span><br><span class="line"><span class="symbol">git</span> clone -<span class="keyword">b</span> hexo https:<span class="comment">//github.com/yourname/xxx.github.io.git</span></span><br></pre></td></tr></table></figure></li>
+<li><p>因为上面创建的是一个名字叫hexo的分支，所以这里-b后面的是hexo，再把后面的gitHub的地址换成你自己的hexo博客的地址就可以了。</p>
+</li>
+<li><p>这样做完了以后，每次写完博客发布之后不要忘了还要git push把源文件推到分支上。</p>
+</li>
+</ol>
+<p><strong>我的个人博客：<a href="https://real-jack.github.io/">https://real-jack.github.io</a></strong></p>
 
     </div>
     
