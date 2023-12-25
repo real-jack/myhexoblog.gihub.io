@@ -221,7 +221,7 @@
 <li><p>里面应该有一个叫.gitignore的文件，如果没有就输入 touch .gitignore，创建一个</p>
 </li>
 <li><p>.gitignore文件里应该是这些内容</p>
- <figure class="highlight x86asm"><table><tr><td class="code"><pre><span class="line"><span class="meta">.DS_Store</span> </span><br><span class="line">Thumbs<span class="number">.</span><span class="built_in">db</span> </span><br><span class="line"><span class="built_in">db</span><span class="number">.</span>json </span><br><span class="line">*.log </span><br><span class="line">node_modules/ </span><br><span class="line"><span class="meta">public</span>/ </span><br><span class="line"><span class="meta">.deploy</span>*/ </span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight x86asm"><table><tr><td class="code"><pre><span class="line"><span class="meta">.DS_Store</span> \n</span><br><span class="line">Thumbs<span class="number">.</span><span class="built_in">db</span> </span><br><span class="line"><span class="built_in">db</span><span class="number">.</span>json </span><br><span class="line">*.log </span><br><span class="line">node_modules/ </span><br><span class="line"><span class="meta">public</span>/ </span><br><span class="line"><span class="meta">.deploy</span>*/ </span><br></pre></td></tr></table></figure></li>
 <li><p>创建一个叫hexo的分支并切换到这个分支上</p>
  <figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> hexo</span><br></pre></td></tr></table></figure></li>
 <li><p>提交复制过来的文件到暂存区</p>
@@ -236,7 +236,7 @@
 <p> 到这一步我们就基本上搞定了，以后再跟新了博客就直接 git push就可以了，hexo的操作跟以前一样不变。</p>
 </li>
 <li><p>今后无论什么时候想要在其他电脑上面用hexo写博客，就直接把创建的分支克隆下来，npm install安装依赖之后就可以用了。</p>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="comment">//克隆分支的操作  \n</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">git</span> clone -<span class="keyword">b</span> hexo https:<span class="comment">//github.com/yourname/xxx.github.io.git  </span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="comment">//克隆分支的操作  \n </span></span><br><span class="line"></span><br><span class="line"><span class="symbol">git</span> clone -<span class="keyword">b</span> hexo https:<span class="comment">//github.com/yourname/xxx.github.io.git  </span></span><br></pre></td></tr></table></figure></li>
 <li><p>因为上面创建的是一个名字叫hexo的分支，所以这里-b后面的是hexo，再把后面的gitHub的地址换成你自己的hexo博客的地址就可以了。</p>
 </li>
 <li><p>这样做完了以后，每次写完博客发布之后不要忘了还要git push把源文件推到分支上。</p>
