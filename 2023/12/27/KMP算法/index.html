@@ -189,12 +189,12 @@
             
             <span class="tag">
                 
-                <a href="../../../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
+                <a href="../../../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../../../../tags/Java/" style="color: #00a596">Java</a>
+                <a href="../../../../tags/Java/" style="color: #00bcd4">Java</a>
             </span>
             
         </span>
@@ -210,8 +210,9 @@
 <h3 id="什么是KMP算法"><a href="#什么是KMP算法" class="headerlink" title="什么是KMP算法"></a><span style="background:#eef0f4;color:blue">什么是KMP算法</span></h3><p>因为是由这三位学者发明的：Knuth，Morris和Pratt，所以取了三位学者名字的首字母。所以叫做KMP</p>
 <h3 id="前缀表"><a href="#前缀表" class="headerlink" title="前缀表"></a><span style="background:#eef0f4;color:blue">前缀表</span></h3><p>作用：避免重复匹配</p>
 <p>首先要知道前缀表的任务是当前位置匹配失败，找到之前已经匹配上的位置，再重新匹配，此也意味着在某个字符失配时，前缀表会告诉你下一步匹配中，模式串应该跳到哪个位置。</p>
+<p>字符串的前缀是指<strong>不包含最后一个字符</strong>的所有以<strong>第一个字符开头</strong>的连续子串；<br>字符串的后缀是指<strong>不包含第一个字符</strong>的所有以<strong>最后一个字符结尾</strong>的连续子串。</p>
 <p>那么什么是前缀表：**<span style="color:red">记录下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。</span>**</p>
-<p>获取前缀表：</p>
+<p><strong>获取前缀表：</strong></p>
 <p>在实际编码时，通常我会往原串和匹配串头部追加一个空格（哨兵）。</p>
 <p>目的是让 <code>j</code> 下标从 <code>0</code> 开始，省去 <code>j</code> 从 <code>-1</code> 开始的麻烦。</p>
 <pre><code>private void getNext(int[] next, String s) &#123;
@@ -223,6 +224,41 @@
         if (s.charAt(j) == s.charAt(i)) 
             j++;
         next[i] = j; 
+    &#125;
+&#125;
+</code></pre>
+<p>图片示意：</p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefined1618847995-vRWimV-6127EBA37435560C20BB8B15D5B790B6.png" alt="6127EBA37435560C20BB8B15D5B790B6.png"></p>
+<p>完整代码：</p>
+<pre><code class="Java">class Solution &#123;
+    public int strStr(String haystack, String needle) &#123;
+        if (needle.length() == 0) return 0;
+        int[] next = new int[needle.length()];
+        getNext(next, needle);
+
+        int j = 0;
+        for (int i = 0; i &lt; haystack.length(); i++) &#123;
+            while (j &gt; 0 &amp;&amp; needle.charAt(j) != haystack.charAt(i)) 
+                j = next[j - 1];
+            if (needle.charAt(j) == haystack.charAt(i)) 
+                j++;
+            if (j == needle.length()) 
+                return i - needle.length() + 1;
+        &#125;
+        return -1;
+
+    &#125;
+    
+    private void getNext(int[] next, String s) &#123;
+        int j = 0;
+        next[0] = 0;
+        for (int i = 1; i &lt; s.length(); i++) &#123;
+            while (j &gt; 0 &amp;&amp; s.charAt(j) != s.charAt(i)) 
+                j = next[j - 1];
+            if (s.charAt(j) == s.charAt(i)) 
+                j++;
+            next[i] = j; 
+        &#125;
     &#125;
 &#125;
 </code></pre>
