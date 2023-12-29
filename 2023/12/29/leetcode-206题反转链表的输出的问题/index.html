@@ -194,7 +194,7 @@
             
             <span class="tag">
                 
-                <a href="../../../../tags/Java/" style="color: #ff7d73">Java</a>
+                <a href="../../../../tags/Java/" style="color: #ffa2c4">Java</a>
             </span>
             
         </span>
@@ -243,7 +243,7 @@ class Solution &#123;
 &#125;
 </code></pre>
 <h3 id="但是，有意思的事情发生了，当我尝试的返回pre-next，它却返回的是null？"><a href="#但是，有意思的事情发生了，当我尝试的返回pre-next，它却返回的是null？" class="headerlink" title="但是，有意思的事情发生了，当我尝试的返回pre.next，它却返回的是null？"></a><span style="background:#eef0f4;color:red">但是，有意思的事情发生了，当我尝试的返回<code>pre.next</code>，它却返回的是null？</span></h3><p>按我的个人理解，这当然是一个错误答案，但正确的返回应该是排除最后一个节点以外的剩余节点的倒序，也不应该是null啊。</p>
-<h4 id="比如：return-pre就应该是5-4-3-2-1-null的话，return-pre就应该是4-3-2-1-null。"><a href="#比如：return-pre就应该是5-4-3-2-1-null的话，return-pre就应该是4-3-2-1-null。" class="headerlink" title="比如：return pre就应该是5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;null的话，return pre就应该是4-&gt;3-&gt;2-&gt;1-&gt;null。"></a>比如：<code>return pre</code>就应该是<code>5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;null</code>的话，<code>return pre</code>就应该是<code>4-&gt;3-&gt;2-&gt;1-&gt;null</code>。</h4><p>个人觉得很有意思，回去后和室友讨论了一下，觉得确实有点问题，把问题跟<code>leetcode</code>反馈了一下，目前还没有回复。</p>
+<h4 id="比如：return-pre就应该是5-4-3-2-1-null的话，return-pre-next就应该是4-3-2-1-null。"><a href="#比如：return-pre就应该是5-4-3-2-1-null的话，return-pre-next就应该是4-3-2-1-null。" class="headerlink" title="比如：return pre就应该是5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;null的话，return pre.next就应该是4-&gt;3-&gt;2-&gt;1-&gt;null。"></a>比如：<code>return pre</code>就应该是<code>5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;null</code>的话，<code>return pre.next</code>就应该是<code>4-&gt;3-&gt;2-&gt;1-&gt;null</code>。</h4><p>个人觉得很有意思，回去后和室友讨论了一下，觉得确实有点问题，把问题跟<code>leetcode</code>反馈了一下，目前还没有回复。</p>
 <p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20231229111250616.png" alt="image-20231229111250616"></p>
 
     </div>
