@@ -4,7 +4,7 @@
 <head>
     <meta name="google-site-verification" content="0M_hgOGybpkDieOrvCMoikpQdEQoP3r64VSxWOy_syY" />
     <meta charset="utf-8" />
-    <title>KMP算法 | jack-hxb</title>
+    <title>leetcode-208题反转链表的输出的问题 | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
@@ -162,22 +162,22 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>KMP算法</h1>
+        <h1>leetcode-208题反转链表的输出的问题</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/12/27
+            2023/12/29
         </span>
         
         <span class="category">
-            <a href="../../../../categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
+            <a href="../../../../categories/Github/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                个人学习
+                Github
             </a>
         </span>
         
@@ -190,12 +190,12 @@
             
             <span class="tag">
                 
-                <a href="../../../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
+                <a href="../../../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">学习</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../../../../tags/Java/" style="color: #03a9f4">Java</a>
+                <a href="../../../../tags/Java/" style="color: #ffa2c4">Java</a>
             </span>
             
         </span>
@@ -203,68 +203,49 @@
     </div>
     
     <div class="content" v-pre>
-        <p>学习一下KMP算法和在Java中的使用。</p>
+        <p>最近在leetcode做206这个反转链表的时候，发现最终输出newH.next的时候有点问题，特此记录一下。</p>
 <span id="more"></span>
 
-
-
-<h3 id="什么是KMP算法"><a href="#什么是KMP算法" class="headerlink" title="什么是KMP算法"></a><span style="background:#eef0f4;color:blue">什么是KMP算法</span></h3><p>因为是由这三位学者发明的：Knuth，Morris和Pratt，所以取了三位学者名字的首字母。所以叫做KMP</p>
-<h3 id="前缀表"><a href="#前缀表" class="headerlink" title="前缀表"></a><span style="background:#eef0f4;color:blue">前缀表</span></h3><p>作用：避免重复匹配</p>
-<p>首先要知道前缀表的任务是当前位置匹配失败，找到之前已经匹配上的位置，再重新匹配，此也意味着在某个字符失配时，前缀表会告诉你下一步匹配中，模式串应该跳到哪个位置。</p>
-<p>字符串的前缀是指<strong>不包含最后一个字符</strong>的所有以<strong>第一个字符开头</strong>的连续子串；<br>字符串的后缀是指<strong>不包含第一个字符</strong>的所有以<strong>最后一个字符结尾</strong>的连续子串。</p>
-<p>那么什么是前缀表：**<span style="color:red">记录下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。</span>**</p>
-<p><strong>获取前缀表：</strong></p>
-<p>在实际编码时，通常我会往原串和匹配串头部追加一个空格（哨兵）。</p>
-<p>目的是让 <code>j</code> 下标从 <code>0</code> 开始，省去 <code>j</code> 从 <code>-1</code> 开始的麻烦。</p>
-<pre><code>private void getNext(int[] next, String s) &#123;
-    int j = 0;
-    next[0] = 0;
-    for (int i = 1; i &lt; s.length(); i++) &#123;
-        while (j &gt; 0 &amp;&amp; s.charAt(j) != s.charAt(i)) 
-            j = next[j - 1];
-        if (s.charAt(j) == s.charAt(i)) 
-            j++;
-        next[i] = j; 
+<p>先看题目：</p>
+<p><strong>206.反转链表</strong></p>
+<p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
+<p><strong>示例1：</strong></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedrev1ex1.jpg" alt="img"></p>
+<pre><code>输入：head = [1,2,3,4,5]
+输出：[5,4,3,2,1]
+</code></pre>
+<p><strong>示例2：</strong></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedrev1ex2.jpg" alt="img"></p>
+<pre><code>输入：head = [1,2]
+输出：[2,1]
+</code></pre>
+<h4 id="我的正常答案：（双指针法）"><a href="#我的正常答案：（双指针法）" class="headerlink" title="我的正常答案：（双指针法）"></a><span style="background:#eef0f4;color:blue">我的正常答案：（双指针法）</span></h4><pre><code class="java">/**
+ * Definition for singly-linked list.
+ * public class ListNode &#123;
+ *     int val;
+ *     ListNode next;
+ *     ListNode() &#123;&#125;
+ *     ListNode(int val) &#123; this.val = val; &#125;
+ *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;
+ * &#125;
+ */
+class Solution &#123;
+    public ListNode reverseList(ListNode head) &#123;
+        ListNode pre = null, cur = head;
+        ListNode tmp;
+        while(cur != null)&#123;
+            tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        &#125;
+        return pre;
     &#125;
 &#125;
 </code></pre>
-<p><strong>图片示意：</strong></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefined1618847995-vRWimV-6127EBA37435560C20BB8B15D5B790B6.png" alt="6127EBA37435560C20BB8B15D5B790B6.png"></p>
-<p><strong>题目：</strong></p>
-<p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回 -1。</p>
-<p><strong>完整代码：</strong></p>
-<pre><code class="Java">class Solution &#123;
-    public int strStr(String haystack, String needle) &#123;
-        if (needle.length() == 0) return 0;
-        int[] next = new int[needle.length()];
-        getNext(next, needle);
-
-        int j = 0;
-        for (int i = 0; i &lt; haystack.length(); i++) &#123;
-            while (j &gt; 0 &amp;&amp; needle.charAt(j) != haystack.charAt(i)) 
-                j = next[j - 1];
-            if (needle.charAt(j) == haystack.charAt(i)) 
-                j++;
-            if (j == needle.length()) 
-                return i - needle.length() + 1;
-        &#125;
-        return -1;
-
-    &#125;
-    
-    private void getNext(int[] next, String s) &#123;
-        int j = 0;
-        next[0] = 0;
-        for (int i = 1; i &lt; s.length(); i++) &#123;
-            while (j &gt; 0 &amp;&amp; s.charAt(j) != s.charAt(i)) 
-                j = next[j - 1];
-            if (s.charAt(j) == s.charAt(i)) 
-                j++;
-            next[i] = j; 
-        &#125;
-    &#125;
-&#125;
-</code></pre>
+<h3 id="但是，有意思的事情发生了，当我尝试的返回pre-next，它却返回的是null？"><a href="#但是，有意思的事情发生了，当我尝试的返回pre-next，它却返回的是null？" class="headerlink" title="但是，有意思的事情发生了，当我尝试的返回pre.next，它却返回的是null？"></a><span style="background:#eef0f4;color:red">但是，有意思的事情发生了，当我尝试的返回<code>pre.next</code>，它却返回的是null？</span></h3><p>按我的个人理解，这当然是一个错误答案，但正确的返回应该是排除最后一个节点以外的剩余节点的倒序，也不应该是null啊。</p>
+<h4 id="比如：return-pre就应该是5-4-3-2-1-null的话，return-pre就应该是4-3-2-1-null。"><a href="#比如：return-pre就应该是5-4-3-2-1-null的话，return-pre就应该是4-3-2-1-null。" class="headerlink" title="比如：return pre就应该是5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;null的话，return pre就应该是4-&gt;3-&gt;2-&gt;1-&gt;null。"></a>比如：<code>return pre</code>就应该是<code>5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;null</code>的话，<code>return pre</code>就应该是<code>4-&gt;3-&gt;2-&gt;1-&gt;null</code>。</h4><p>个人觉得很有意思，回去后和室友讨论了一下，觉得确实有点问题，把问题跟<code>leetcode</code>反馈了一下，目前还没有回复。</p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20231229111250616.png" alt="image-20231229111250616"></p>
 
     </div>
     
