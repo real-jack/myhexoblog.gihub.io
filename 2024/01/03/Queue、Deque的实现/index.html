@@ -182,6 +182,19 @@
         </span>
         
         
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="../../../../tags/%E5%AD%A6%E4%B9%A0%EF%BC%8CJava/" style="color: #03a9f4">学习，Java</a>
+            </span>
+            
+        </span>
+        
     </div>
     
     <div class="content" v-pre>
@@ -195,20 +208,47 @@ Queue&lt;String&gt; animal1 = new LinkedList&lt;&gt;();
 // 使用 ArrayDeque 创建
 Queue&lt;String&gt; animal2 = new ArrayDeque&lt;&gt;();
 
-// 使用 PriorityQueue创建
-Queue&lt;String&gt; animal 3 = new PriorityQueue&lt;&gt;();
+// 使用 PriorityQueue创建 （优先级队列）
+Queue&lt;String&gt; animal3 = new PriorityQueue&lt;&gt;();
 </code></pre>
 <p><font face="楷体" size=24><span style="background:#eef0f4;color:Chocolate">Queue的常用方法：</span></font></p>
-<ul>
-<li><strong>add()</strong> - 将指定的元素插入队列。如果任务成功，则add()返回true，否则将引发异常。</li>
+<h3 id="Queue的常用方法——添加元素"><a href="#Queue的常用方法——添加元素" class="headerlink" title="Queue的常用方法——添加元素"></a><font face="楷体"><span style="background:#eef0f4;color:DarkCyan">Queue的常用方法——添加元素</span></font></h3><ul>
+<li><strong>add()</strong> - 将指定的元素插入队列尾部。如果任务成功，则add()返回true，否则将引发异常。</li>
+<li><strong>addFirst()</strong> - 将指定的元素插入队列头部。如果任务成功，则add()返回true，否则将引发异常。</li>
 </ul>
 <ul>
-<li><strong>offer()</strong> - 将指定的元素插入队列。如果任务成功，则offer()返回true，否则返回false。</li>
+<li><strong>offer()</strong> - 将指定的元素插入队列尾部。如果任务成功，则offer()返回true，否则返回false。</li>
+<li><strong>offerFirst()</strong> - 将指定的元素插入队列头部。如果任务成功，则offer()返回true，否则返回false。</li>
+</ul>
+<h3 id="Queue的常用方法——查看元素"><a href="#Queue的常用方法——查看元素" class="headerlink" title="Queue的常用方法——查看元素"></a><font face="楷体"><span style="background:#eef0f4;color:DarkCyan">Queue的常用方法——查看元素</span></font></h3><ul>
 <li><strong>element()</strong> - 返回队列的开头。如果队列为空，则引发异常。</li>
 <li><strong>peek()</strong> - 返回队列的开头。 如果队列为空，则返回null。</li>
+<li><strong>getFirst()</strong> - 返回队列的开头。 如果队列为空，则返回null。</li>
+<li><strong>getLast()</strong> - 返回队列的结尾。 如果队列为空，则返回null。</li>
+</ul>
+<h3 id="Queue的常用方法——删除元素"><a href="#Queue的常用方法——删除元素" class="headerlink" title="Queue的常用方法——删除元素"></a><font face="楷体"><span style="background:#eef0f4;color:DarkCyan">Queue的常用方法——删除元素</span></font></h3><ul>
 <li><strong>remove()</strong> - 返回并删除队列的头部。如果队列为空，则引发异常。</li>
+<li><strong>removeLast()</strong> - 返回并删除队列的尾部。如果队列为空，则引发异常。</li>
 <li><strong>poll()</strong> - 返回并删除队列的开头。 如果队列为空，则返回null。</li>
 </ul>
+<h3 id="Queue的其余方法"><a href="#Queue的其余方法" class="headerlink" title="Queue的其余方法"></a><font face="楷体"><span style="background:#eef0f4;color:DarkCyan">Queue的其余方法</span></font></h3><ul>
+<li><strong>contains()</strong> - 检查队列是否包含该元素。如果队列不包含，则返回false，包含返回true。</li>
+<li><strong>size()</strong> - 返回队列中存储元素的个数。</li>
+<li><strong>for-each循环</strong> - 迭代队列中的元素。</li>
+<li><strong>iterator（）</strong> - 迭代队列中的元素。</li>
+</ul>
+<pre><code class="java">//通过迭代器迭代Deque 
+Deque&lt;String&gt; deque = new LinkedList&lt;&gt;();
+ 
+deque.add(&quot;element 0&quot;);
+deque.add(&quot;element 1&quot;);
+deque.add(&quot;element 2&quot;);
+ 
+Iterator&lt;String&gt; iterator = deque.iterator();
+while(iterator.hasNext()&#123;
+  String element = iterator.next();
+&#125;
+</code></pre>
 
     </div>
     
