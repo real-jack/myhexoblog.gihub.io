@@ -185,7 +185,31 @@
     </div>
     
     <div class="content" v-pre>
-        
+        <p><font face="楷体" size=24><span style="background:#eef0f4;color:Chocolate">Queue的原理：</span></font></p>
+<p>​        Queue，队列，以<code>先进先出</code>的方式访问和存储元素，也就是说，<strong>从后面添加元素，从前面删除元素</strong>。</p>
+<p>​		它的实现有以下三种方式：</p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedqueue-interface.png" alt="ArrayDeque，LinkedList和PriorityQueue在Java中实现了Queue接口。"></p>
+<pre><code class="java">// 使用 LinkedList 创建
+Queue&lt;String&gt; animal1 = new LinkedList&lt;&gt;();
+
+// 使用 ArrayDeque 创建
+Queue&lt;String&gt; animal2 = new ArrayDeque&lt;&gt;();
+
+// 使用 PriorityQueue创建
+Queue&lt;String&gt; animal 3 = new PriorityQueue&lt;&gt;();
+</code></pre>
+<p><font face="楷体" size=24><span style="background:#eef0f4;color:Chocolate">Queue的常用方法：</span></font></p>
+<ul>
+<li><strong>add()</strong> - 将指定的元素插入队列。如果任务成功，则add()返回true，否则将引发异常。</li>
+</ul>
+<ul>
+<li><strong>offer()</strong> - 将指定的元素插入队列。如果任务成功，则offer()返回true，否则返回false。</li>
+<li><strong>element()</strong> - 返回队列的开头。如果队列为空，则引发异常。</li>
+<li><strong>peek()</strong> - 返回队列的开头。 如果队列为空，则返回null。</li>
+<li><strong>remove()</strong> - 返回并删除队列的头部。如果队列为空，则引发异常。</li>
+<li><strong>poll()</strong> - 返回并删除队列的开头。 如果队列为空，则返回null。</li>
+</ul>
+
     </div>
     
     
