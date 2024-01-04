@@ -4,12 +4,12 @@
 <head>
     <meta name="google-site-verification" content="0M_hgOGybpkDieOrvCMoikpQdEQoP3r64VSxWOy_syY" />
     <meta charset="utf-8" />
-    <title>Categories: Github | jack-hxb</title>
+    <title>KMP算法 | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="icon" href="../../images/avatar.jpg" />
+    <link rel="icon" href="../images/avatar.jpg" />
     <link rel="preconnect" href="https://cdn.staticfile.org" />
 <script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
 
@@ -29,17 +29,21 @@
     rel="stylesheet"
     href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
 />
-<script src="../../js/lib/highlight.js"></script>
+<script src="../js/lib/highlight.js"></script>
 
 
 
-<script src="../../js/lib/preview.js"></script>
+<script src="../js/lib/preview.js"></script>
 
 
 
 
 
-<link rel="stylesheet" href="../../css/main.css" />
+
+
+
+
+<link rel="stylesheet" href="../css/main.css" />
 
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body>
@@ -58,7 +62,7 @@
                 <div id="loading-circle">
                     <h2>LOADING</h2>
                     <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="../../images/loading.gif" />
+                    <img src="../images/loading.gif" />
                 </div>
             </div>
         </transition>
@@ -68,27 +72,27 @@
             <span>JACK-HXB</span>
         </a>
         
-        <a href="../../index.html">
+        <a href="../index.html">
             <i class="fa-solid fa-house fa-fw"></i>
             <span>&ensp;Home</span>
         </a>
         
-        <a href="../../about">
+        <a href="../about">
             <i class="fa-solid fa-id-card fa-fw"></i>
             <span>&ensp;About</span>
         </a>
         
-        <a href="../../archives">
+        <a href="../archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;Archives</span>
         </a>
         
-        <a href="../../categories">
+        <a href="../categories">
             <i class="fa-solid fa-bookmark fa-fw"></i>
             <span>&ensp;Categories</span>
         </a>
         
-        <a href="../../tags">
+        <a href="../tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
         </a>
@@ -102,7 +106,7 @@
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
                 
-                <a href="../../index.html">
+                <a href="../index.html">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
@@ -111,7 +115,7 @@
                     </div>
                 </a>
                 
-                <a href="../../about">
+                <a href="../about">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
@@ -120,7 +124,7 @@
                     </div>
                 </a>
                 
-                <a href="../../archives">
+                <a href="../archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-box-archive fa-fw"></i>
@@ -129,7 +133,7 @@
                     </div>
                 </a>
                 
-                <a href="../../categories">
+                <a href="../categories">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-bookmark fa-fw"></i>
@@ -138,7 +142,7 @@
                     </div>
                 </a>
                 
-                <a href="../../tags">
+                <a href="../tags">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-tags fa-fw"></i>
@@ -156,14 +160,20 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div class="article">
+    <div>
+        <h1>KMP算法</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/12/27
+        </span>
         
-        
-        
-        <span>
-            <a href="../%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" style="background: #03a9f4">
+        <span class="category">
+            <a href="../categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -172,61 +182,118 @@
         </span>
         
         
-        
-        <span>
-            <a href="" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Github
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="../tags/Java/" style="color: #00a596">Java</a>
+            </span>
+            
         </span>
-        
-        
-        
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/12/29</div>
-            <a href="../../posts/3f4948d6.html">
-                <h3>leetcode-206题反转链表的输出的问题</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        Github
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/Java/" style="color: #00a596">Java</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p>学习一下KMP算法和在Java中的使用。</p>
+<span id="more"></span>
+
+
+
+<h3 id="什么是KMP算法"><a href="#什么是KMP算法" class="headerlink" title="什么是KMP算法"></a><span style="background:#eef0f4;color:blue">什么是KMP算法</span></h3><p>因为是由这三位学者发明的：Knuth，Morris和Pratt，所以取了三位学者名字的首字母。所以叫做KMP</p>
+<h3 id="前缀表"><a href="#前缀表" class="headerlink" title="前缀表"></a><span style="background:#eef0f4;color:blue">前缀表</span></h3><p>作用：避免重复匹配</p>
+<p>首先要知道前缀表的任务是当前位置匹配失败，找到之前已经匹配上的位置，再重新匹配，此也意味着在某个字符失配时，前缀表会告诉你下一步匹配中，模式串应该跳到哪个位置。</p>
+<p>字符串的前缀是指<strong>不包含最后一个字符</strong>的所有以<strong>第一个字符开头</strong>的连续子串；<br>字符串的后缀是指<strong>不包含第一个字符</strong>的所有以<strong>最后一个字符结尾</strong>的连续子串。</p>
+<p>那么什么是前缀表：**<span style="color:red">记录下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。</span>**</p>
+<p><strong>获取前缀表：</strong></p>
+<p>在实际编码时，通常我会往原串和匹配串头部追加一个空格（哨兵）。</p>
+<p>目的是让 <code>j</code> 下标从 <code>0</code> 开始，省去 <code>j</code> 从 <code>-1</code> 开始的麻烦。</p>
+<pre><code>private void getNext(int[] next, String s) &#123;
+    int j = 0;
+    next[0] = 0;
+    for (int i = 1; i &lt; s.length(); i++) &#123;
+        while (j &gt; 0 &amp;&amp; s.charAt(j) != s.charAt(i)) 
+            j = next[j - 1];
+        if (s.charAt(j) == s.charAt(i)) 
+            j++;
+        next[i] = j; 
+    &#125;
+&#125;
+</code></pre>
+<p><strong>图片示意：</strong></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefined1618847995-vRWimV-6127EBA37435560C20BB8B15D5B790B6.png" alt="6127EBA37435560C20BB8B15D5B790B6.png"></p>
+<p><strong>题目：</strong></p>
+<p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回 -1。</p>
+<p><strong>完整代码：</strong></p>
+<pre><code class="Java">class Solution &#123;
+    public int strStr(String haystack, String needle) &#123;
+        if (needle.length() == 0) return 0;
+        int[] next = new int[needle.length()];
+        getNext(next, needle);
+
+        int j = 0;
+        for (int i = 0; i &lt; haystack.length(); i++) &#123;
+            while (j &gt; 0 &amp;&amp; needle.charAt(j) != haystack.charAt(i)) 
+                j = next[j - 1];
+            if (needle.charAt(j) == haystack.charAt(i)) 
+                j++;
+            if (j == needle.length()) 
+                return i - needle.length() + 1;
+        &#125;
+        return -1;
+
+    &#125;
+    
+    private void getNext(int[] next, String s) &#123;
+        int j = 0;
+        next[0] = 0;
+        for (int i = 1; i &lt; s.length(); i++) &#123;
+            while (j &gt; 0 &amp;&amp; s.charAt(j) != s.charAt(i)) 
+                j = next[j - 1];
+            if (s.charAt(j) == s.charAt(i)) 
+                j++;
+            next[i] = j; 
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+
     </div>
+    
+    
+    
+
+    <script src="https://giscus.app/client.js"
+        data-repo="real-jack/giscus"
+        data-repo-id="R_kgDOK8VQHw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK8VQH84Cb6N2"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
     
 </div>
 
@@ -345,7 +412,30 @@
     <script src="/live2d-widget/autoload.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 
-    <script src="../../js/main.js"></script>
+    <script src="../js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="real-jack/giscus"
+    data-repo-id=""
+    data-category="Announcements"
+    data-category-id=""
+    data-mapping="url"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
     
 
     <p style="text-align:center" id="saintwei"></p>
