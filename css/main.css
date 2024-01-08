@@ -979,14 +979,14 @@ ol li {
     width: 100%;
 }
 @media only screen and (max-width: 767px) {
-    .bilibili {height: 15em;max-width: 25em;}
+    .bilibili {height: 18em;max-width: 30em;}
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .bilibili {height: 20em;max-width: 30em;}
+    .bilibili {height: 26em;max-width: 39em;}
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .bilibili {height: 30em;max-width: 40em;}
+    .bilibili {height: 36em;max-width: 48em;}
 }
 @media only screen and (min-width: 1200px) {
-    .bilibili {height: 40em;max-width: 50em;}
+    .bilibili {height: 200em;max-width: 250em;}
 }
