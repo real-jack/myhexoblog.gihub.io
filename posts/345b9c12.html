@@ -190,12 +190,12 @@
             
             <span class="tag">
                 
-                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
+                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../tags/Java/" style="color: #00a596">Java</a>
+                <a href="../tags/Java/" style="color: #00bcd4">Java</a>
             </span>
             
         </span>
@@ -220,8 +220,59 @@
 </code></pre>
 <p><font face="楷体" size=8><span style="background:#eef0f4;color:Navy">二叉树的遍历：</span></font></p>
 <p><font face="楷体" size=6><span style="background:#eef0f4;color:Orchid">前序遍历：</span></font></p>
+<pre><code class="java">class Solution &#123;
+    public List&lt;Integer&gt; preorderTraversal(TreeNode root) &#123;
+        List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+        preorder(root, lst);
+        return lst;
+    &#125;
+
+    public void preorder(TreeNode root, List&lt;Integer&gt; lst)&#123;
+        if(root == null)&#123;
+            return;
+        &#125;
+        lst.add(root.val);
+        preorder(root.left, lst);
+        preorder(root.right, lst);
+    &#125;
+&#125;
+</code></pre>
 <p><font face="楷体" size=6><span style="background:#eef0f4;color:Orchid">中序遍历：</span></font></p>
+<pre><code class="java">class Solution &#123;
+    public List&lt;Integer&gt; inorderTraversal(TreeNode root) &#123;
+        List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+        inorder(root, lst);
+        return lst;
+    &#125;
+
+    public void inorder(TreeNode root, List&lt;Integer&gt; lst)&#123;
+        if(root == null)&#123;
+            return;
+        &#125;
+        inorder(root.left, lst);
+        lst.add(root.val);
+        inorder(root.right, lst);
+    &#125;
+&#125;
+</code></pre>
 <p><font face="楷体" size=6><span style="background:#eef0f4;color:Orchid">后序遍历：</span></font></p>
+<pre><code class="java">class Solution &#123;
+    public List&lt;Integer&gt; postorderTraversal(TreeNode root) &#123;
+        List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+        postorder(root, lst);
+        return lst;
+    &#125;
+
+    public void postorder(TreeNode root, List&lt;Integer&gt; lst)&#123;
+        if(root == null)&#123;
+            return;
+        &#125;
+        postorder(root.left, lst);
+        postorder(root.right, lst);
+        lst.add(root.val);
+    &#125;
+&#125;
+</code></pre>
 
     </div>
     
