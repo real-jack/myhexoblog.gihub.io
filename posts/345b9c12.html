@@ -195,7 +195,7 @@
             
             <span class="tag">
                 
-                <a href="../tags/Java/" style="color: #03a9f4">Java</a>
+                <a href="../tags/Java/" style="color: #00bcd4">Java</a>
             </span>
             
         </span>
@@ -270,6 +270,37 @@
         postorder(root.left, lst);
         postorder(root.right, lst);
         lst.add(root.val);
+    &#125;
+&#125;
+</code></pre>
+<p><font face="楷体" size=6><span style="background:#eef0f4;color:Orchid">层序遍历：</span></font></p>
+<pre><code class="java">class Solution &#123;
+    public List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) &#123;
+        List&lt;List&lt;Integer&gt;&gt; ans = new ArrayList&lt;&gt;();
+        bfs(root, ans);
+        return ans;
+    &#125;
+
+    public void bfs(TreeNode root, List&lt;List&lt;Integer&gt;&gt; ans)&#123;
+        if(root == null)&#123;
+            return;
+        &#125;
+        Queue&lt;TreeNode&gt; q = new LinkedList&lt;&gt;();
+        q.add(root);
+        while(!q.isEmpty())&#123;
+            int len = q.size();
+            List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+
+            while(len &gt; 0)&#123;
+                TreeNode node = q.remove();
+                lst.add(node.val);
+
+                if(node.left != null) q.add(node.left);
+                if(node.right != null) q.add(node.right);
+                len--;
+            &#125;
+            ans.add(lst);
+        &#125;
     &#125;
 &#125;
 </code></pre>
