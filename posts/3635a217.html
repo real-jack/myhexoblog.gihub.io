@@ -202,6 +202,27 @@
 <p>回溯算法中函数返回值一般为void。</p>
 <pre><code class="java">void backtracking(参数)
 </code></pre>
+<p>什么时候达到了终止条件，树中就可以看出，一般来说搜到叶子节点了，也就找到了满足条件的一条答案，把这个答案存放起来，并结束本层递归。</p>
+<p>所以回溯函数终止条件伪代码如下：</p>
+<pre><code class="java">if (终止条件) &#123;
+    存放结果;
+    return;
+&#125;
+</code></pre>
+<p>总的伪代码：</p>
+<pre><code class="java">void backtracking(参数) &#123;
+    if (终止条件) &#123;
+        存放结果;
+        return;
+    &#125;
+
+    for (选择：本层集合中元素（树中节点孩子的数量就是集合的大小）) &#123;
+        处理节点;
+        backtracking(路径，选择列表); // 递归
+        回溯，撤销处理结果
+    &#125;
+&#125;
+</code></pre>
 
     </div>
     
