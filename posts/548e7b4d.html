@@ -195,12 +195,12 @@
             
             <span class="tag">
                 
-                <a href="../tags/Java/" style="color: #00bcd4">Java</a>
+                <a href="../tags/Java/" style="color: #ffa2c4">Java</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../tags/%E9%A1%B9%E7%9B%AE/" style="color: #ffa2c4">项目</a>
+                <a href="../tags/%E9%A1%B9%E7%9B%AE/" style="color: #03a9f4">项目</a>
             </span>
             
         </span>
@@ -215,6 +215,21 @@
 <p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227171331826.png" alt="image-20240227171331826"></p>
 <p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">前后端联调登录之后：</span></font></p>
 <p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227172902482.png" alt="image-20240227172902482"></p>
+<p><strong>nginx 反向代理</strong>，就是将前端发送的动态请求由 nginx 转发到后端服务器。</p>
+<p><font face="楷体" size=4><span style="background:#eef0f4;color:Chocolate">那为什么不直接通过浏览器直接请求后台服务端，需要通过nginx反向代理呢？</span></font></p>
+<p><span style="background:#eef0f4;color:Maroon">nginx 反向代理的好处：</span></p>
+<ul>
+<li><font color="red">提高访问速度</font></li>
+</ul>
+<p>​		因为nginx本身可以进行缓存，如果访问的同一接口，并且做了数据缓存，nginx就直接可把数据返回，不需要真正地访问服务端，从而提高访问速度。</p>
+<ul>
+<li><font color="red">进行负载均衡</font></li>
+</ul>
+<p>​		所谓负载均衡,就是把大量的请求按照我们指定的方式均衡的分配给集群中的每台服务器。</p>
+<ul>
+<li><font color="red">保证后端服务安全</font></li>
+</ul>
+<p>​		因为一般后台服务地址不会暴露，所以使用浏览器不能直接访问，可以把nginx作为请求访问的入口，请求到达nginx后转发到具体的服务中，从而保证后端服务的安全。</p>
 
     </div>
     
