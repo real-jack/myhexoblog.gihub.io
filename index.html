@@ -179,10 +179,19 @@
         
 
 <div class="post">
-    <a href="posts/0.html">
-        <h2 class="post-title"></h2>
+    <a href="posts/938391b4.html">
+        <h2 class="post-title">项目——菜品管理</h2>
     </a>
     <div class="category-and-date">
+        
+        <span class="category">
+            <a href="categories/java%E9%A1%B9%E7%9B%AE/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                java项目
+            </a>
+        </span>
         
         <span class="date">
             <span class="icon">
@@ -196,51 +205,95 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <p>title: java项目——外卖——员工操作<br>categories: 个人学习<br>tags: [学习,Java,项目]<br>description: 项目的初始化，后端的基本架构、数据库的建立，上传到github，保持更新。<br>abbrlink: 548e7b4d<br>date: 2024-02-21 16:37:09<br>keywords:</p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">项目Github地址：（同步更新中）</span></font></p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate"><a target="_blank" rel="noopener" href="https://github.com/real-jack/sky-take-out/tree/master">https://github.com/real-jack/sky-take-out/tree/master</a></span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedf59c366644684b6688d01c4b45f57021.png" alt="在这里插入图片描述"></p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">前端界面：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227171331826.png" alt="image-20240227171331826"></p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">前后端联调登录之后：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227172902482.png" alt="image-20240227172902482"></p>
-<p><strong>nginx 反向代理</strong>，就是将前端发送的动态请求由 nginx 转发到后端服务器。</p>
-<p><font face="楷体" size=4><span style="background:#eef0f4;color:Chocolate">那为什么不直接通过浏览器直接请求后台服务端，需要通过nginx反向代理呢？</span></font></p>
-<p><span style="background:#eef0f4;color:Maroon">nginx 反向代理的好处：</span></p>
-<ul>
-<li><font color="red">提高访问速度</font></li>
-</ul>
-<p>​		因为nginx本身可以进行缓存，如果访问的同一接口，并且做了数据缓存，nginx就直接可把数据返回，不需要真正地访问服务端，从而提高访问速度。</p>
-<ul>
-<li><font color="red">进行负载均衡</font></li>
-</ul>
-<p>​		所谓负载均衡,就是把大量的请求按照我们指定的方式均衡的分配给集群中的每台服务器。</p>
-<ul>
-<li><font color="red">保证后端服务安全</font></li>
-</ul>
-<p>​		因为一般后台服务地址不会暴露，所以使用浏览器不能直接访问，可以把nginx作为请求访问的入口，请求到达nginx后转发到具体的服务中，从而保证后端服务的安全。</p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">接口导入：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227204244189.png" alt="image-20240227204244189"></p>
-<h3 id="功能一："><a href="#功能一：" class="headerlink" title="功能一："></a><span style="background:#eef0f4;color:MediumVioletRed">功能一：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">生成swagger：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227205707776.png" alt="image-20240227205707776"></p>
-<h3 id="功能二："><a href="#功能二：" class="headerlink" title="功能二："></a><span style="background:#eef0f4;color:MediumVioletRed">功能二：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工分页查询：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228215707819.png" alt="image-20240228215707819"></p>
-<h3 id="功能三："><a href="#功能三：" class="headerlink" title="功能三："></a><span style="background:#eef0f4;color:MediumVioletRed">功能三：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">新增员工：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228215804796.png" alt="image-20240228215804796"></p>
-<h3 id="功能四："><a href="#功能四：" class="headerlink" title="功能四："></a><span style="background:#eef0f4;color:MediumVioletRed">功能四：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工状态修改：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228220313912.png" alt="image-20240228220313912"></p>
-<h3 id="功能五："><a href="#功能五：" class="headerlink" title="功能五："></a><span style="background:#eef0f4;color:MediumVioletRed">功能五：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工信息修改：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240229171151828.png" alt="image-20240229171151828"></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="100" src="https://music.163.com/outchain/player?type=2&amp;id=1812257790&amp;auto=1&amp;height=100"></iframe>
+            <p>菜品的管理和分类，简单的增删改查。</p>
+
             
         </div>
     </div>
     <div class="post-tags">
         
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="tags/Java/" style="color: #00a596">Java</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="tags/%E9%A1%B9%E7%9B%AE/" style="color: #03a9f4">项目</a>
+        </span>
+        
+    </div>
+    <a href="posts/938391b4.html" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="posts/548e7b4d.html">
+        <h2 class="post-title">java项目——外卖——员工操作</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="categories/java%E9%A1%B9%E7%9B%AE/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                java项目
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/2/21
+        </span>
         
         
     </div>
-    <a href="posts/0.html" class="go-post">阅读全文</a>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>项目的初始化，后端的基本架构、数据库的建立，上传到github，保持更新。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">学习</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="tags/Java/" style="color: #00a596">Java</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="tags/%E9%A1%B9%E7%9B%AE/" style="color: #00bcd4">项目</a>
+        </span>
+        
+    </div>
+    <a href="posts/548e7b4d.html" class="go-post">阅读全文</a>
 </div>
 
 <div class="post">
@@ -285,7 +338,7 @@
         
         <span class="tag">
             
-            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
         </span>
         
         <span class="tag">
@@ -339,12 +392,12 @@
         
         <span class="tag">
             
-            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
         </span>
         
         <span class="tag">
             
-            <a href="tags/Java/" style="color: #ffa2c4">Java</a>
+            <a href="tags/Java/" style="color: #00bcd4">Java</a>
         </span>
         
     </div>
@@ -393,12 +446,12 @@
         
         <span class="tag">
             
-            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">学习</a>
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">学习</a>
         </span>
         
         <span class="tag">
             
-            <a href="tags/Java/" style="color: #00bcd4">Java</a>
+            <a href="tags/Java/" style="color: #03a9f4">Java</a>
         </span>
         
     </div>
@@ -452,7 +505,7 @@
         
         <span class="tag">
             
-            <a href="tags/Java/" style="color: #00a596">Java</a>
+            <a href="tags/Java/" style="color: #ff7d73">Java</a>
         </span>
         
     </div>
@@ -501,7 +554,7 @@
         
         <span class="tag">
             
-            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">学习</a>
         </span>
         
         <span class="tag">
@@ -555,12 +608,12 @@
         
         <span class="tag">
             
-            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
         </span>
         
         <span class="tag">
             
-            <a href="tags/Java/" style="color: #00a596">Java</a>
+            <a href="tags/Java/" style="color: #ffa2c4">Java</a>
         </span>
         
     </div>
@@ -609,12 +662,12 @@
         
         <span class="tag">
             
-            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">学习</a>
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
         </span>
         
         <span class="tag">
             
-            <a href="tags/hexo/" style="color: #ff7d73">hexo</a>
+            <a href="tags/hexo/" style="color: #00a596">hexo</a>
         </span>
         
     </div>
@@ -663,65 +716,16 @@
         
         <span class="tag">
             
-            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">学习</a>
+            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
         </span>
         
         <span class="tag">
             
-            <a href="tags/hexo/" style="color: #ffa2c4">hexo</a>
+            <a href="tags/hexo/" style="color: #ff7d73">hexo</a>
         </span>
         
     </div>
     <a href="posts/c74c4101.html" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="posts/25ba8e89.html">
-        <h2 class="post-title">Hello，Guests！</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="category">
-            <a href="categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                个人学习
-            </a>
-        </span>
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/12/20
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>欢迎来到 <a href="https://real-jack.github.io/">real-jack</a>! 这是我的第一个博客。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>快速上手</p>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
-        </span>
-        
-    </div>
-    <a href="posts/25ba8e89.html" class="go-post">阅读全文</a>
 </div>
 
 
@@ -729,8 +733,14 @@
     
     <span class="current">1</span>
     
+    <a class="page-num" href="page/2">2</a>
     
     
+    
+    
+    <a class="page-num" href="page/2/">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
     
 </div>
 

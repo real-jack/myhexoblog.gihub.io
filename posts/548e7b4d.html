@@ -4,7 +4,7 @@
 <head>
     <meta name="google-site-verification" content="0M_hgOGybpkDieOrvCMoikpQdEQoP3r64VSxWOy_syY" />
     <meta charset="utf-8" />
-    <title>Queue、Deque小结 | jack-hxb</title>
+    <title>java项目——外卖——员工操作 | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
@@ -162,22 +162,22 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Queue、Deque小结</h1>
+        <h1>java项目——外卖——员工操作</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/1/3
+            2024/2/21
         </span>
         
         <span class="category">
-            <a href="../categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
+            <a href="../categories/java%E9%A1%B9%E7%9B%AE/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                个人学习
+                java项目
             </a>
         </span>
         
@@ -190,12 +190,17 @@
             
             <span class="tag">
                 
-                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
+                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../tags/Java/" style="color: #00a596">Java</a>
+                <a href="../tags/Java/" style="color: #ff7d73">Java</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="../tags/%E9%A1%B9%E7%9B%AE/" style="color: #ffa2c4">项目</a>
             </span>
             
         </span>
@@ -203,88 +208,41 @@
     </div>
     
     <div class="content" v-pre>
-        <p><font face="楷体" size=24><span style="background:#eef0f4;color:Chocolate">Queue的原理：</span></font></p>
-<p>​        Queue，队列，以<code>先进先出</code>的方式访问和存储元素，也就是说，<strong>从后面添加元素，从前面删除元素</strong>。</p>
-<p>​		它的实现有以下三种方式：</p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedqueue-interface.png" alt="ArrayDeque，LinkedList和PriorityQueue在Java中实现了Queue接口。"></p>
-<pre><code class="java">// 使用 LinkedList 创建
-Queue&lt;String&gt; animal1 = new LinkedList&lt;&gt;();
-
-// 使用 ArrayDeque 创建
-Queue&lt;String&gt; animal2 = new ArrayDeque&lt;&gt;();
-
-// 使用 PriorityQueue创建 （优先级队列）
-Queue&lt;String&gt; animal3 = new PriorityQueue&lt;&gt;();
-</code></pre>
-<p><font color="red">Queue的方法与Deque类似，就是只有队列头部删除、尾部增加的方法，所以就以Deque为例进行总结。</font></p>
-<p><font face="楷体" size=24><span style="background:#eef0f4;color:Chocolate">Deque的常用方法：</span></font></p>
-<h3 id="Deque的常用方法——添加元素"><a href="#Deque的常用方法——添加元素" class="headerlink" title="Deque的常用方法——添加元素"></a><font face="楷体"><span style="background:#eef0f4;color:DarkCyan">Deque的常用方法——添加元素</span></font></h3><ul>
-<li><strong>add()</strong> - 将指定的元素插入队列尾部。如果任务成功，则add()返回true，否则将引发异常。</li>
-<li><strong>addFirst()</strong> - 将指定的元素插入队列头部。如果任务成功，则addFirst()返回true，否则将引发异常。</li>
-</ul>
+        <p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">项目Github地址：（同步更新中）</span></font></p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate"><a target="_blank" rel="noopener" href="https://github.com/real-jack/sky-take-out/tree/master">https://github.com/real-jack/sky-take-out/tree/master</a></span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedf59c366644684b6688d01c4b45f57021.png" alt="在这里插入图片描述"></p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">前端界面：</span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227171331826.png" alt="image-20240227171331826"></p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">前后端联调登录之后：</span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227172902482.png" alt="image-20240227172902482"></p>
+<p><strong>nginx 反向代理</strong>，就是将前端发送的动态请求由 nginx 转发到后端服务器。</p>
+<p><font face="楷体" size=4><span style="background:#eef0f4;color:Chocolate">那为什么不直接通过浏览器直接请求后台服务端，需要通过nginx反向代理呢？</span></font></p>
+<p><span style="background:#eef0f4;color:Maroon">nginx 反向代理的好处：</span></p>
 <ul>
-<li><strong>offer()</strong> - 将指定的元素插入队列尾部。如果任务成功，则offer()返回true，否则返回false。</li>
-<li><strong>offerFirst()</strong> - 将指定的元素插入队列头部。如果任务成功，则offerFirst()返回true，否则返回false。</li>
-<li><strong>push()</strong> - 将指定的元素插入队列头部。如果任务成功，则push()返回true，否则返回false。</li>
+<li><font color="red">提高访问速度</font></li>
 </ul>
-<h3 id="Deque的常用方法——查看元素"><a href="#Deque的常用方法——查看元素" class="headerlink" title="Deque的常用方法——查看元素"></a><font face="楷体"><span style="background:#eef0f4;color:DarkCyan">Deque的常用方法——查看元素</span></font></h3><ul>
-<li><strong>element()</strong> - 返回队列的开头。如果队列为空，则引发异常。</li>
-<li><strong>peek()</strong> - 返回队列的开头。 如果队列为空，则返回null。</li>
-<li><strong>getFirst()</strong> - 返回队列的开头。 如果队列为空，则返回null。</li>
-<li><strong>getLast()</strong> - 返回队列的结尾。 如果队列为空，则返回null。</li>
+<p>​		因为nginx本身可以进行缓存，如果访问的同一接口，并且做了数据缓存，nginx就直接可把数据返回，不需要真正地访问服务端，从而提高访问速度。</p>
+<ul>
+<li><font color="red">进行负载均衡</font></li>
 </ul>
-<h3 id="Deque的常用方法——删除元素"><a href="#Deque的常用方法——删除元素" class="headerlink" title="Deque的常用方法——删除元素"></a><font face="楷体"><span style="background:#eef0f4;color:DarkCyan">Deque的常用方法——删除元素</span></font></h3><ul>
-<li><strong>remove()</strong> - 返回并删除队列的头部。如果队列为空，则引发异常。</li>
-<li><strong>removeLast()</strong> - 返回并删除队列的尾部。如果队列为空，则引发异常。</li>
-<li><strong>poll()</strong> - 返回并删除队列的开头。 如果队列为空，则返回null。</li>
-<li><strong>pollLast()</strong> - 返回并删除队列的尾部。 如果队列为空，则返回null。</li>
-<li><strong>pop()</strong> - 返回并删除队列的开头。 如果队列为空，则引发异常。</li>
+<p>​		所谓负载均衡,就是把大量的请求按照我们指定的方式均衡的分配给集群中的每台服务器。</p>
+<ul>
+<li><font color="red">保证后端服务安全</font></li>
 </ul>
-<h3 id="Deque的其余方法"><a href="#Deque的其余方法" class="headerlink" title="Deque的其余方法"></a><font face="楷体"><span style="background:#eef0f4;color:DarkCyan">Deque的其余方法</span></font></h3><ul>
-<li><strong>contains()</strong> - 检查队列是否包含该元素。如果队列不包含，则返回false，包含返回true。</li>
-<li><strong>size()</strong> - 返回队列中存储元素的个数。</li>
-<li><strong>isEmpty()</strong> - 返回队列中元素是否为空。</li>
-<li><strong>for-each循环</strong> - 迭代队列中的元素。</li>
-<li><strong>iterator（）</strong> - 迭代队列中的元素。</li>
-</ul>
-<pre><code class="java">//通过迭代器迭代Deque 
-Deque&lt;String&gt; deque = new LinkedList&lt;&gt;();
- 
-deque.add(&quot;element 0&quot;);
-deque.add(&quot;element 1&quot;);
-deque.add(&quot;element 2&quot;);
- 
-Iterator&lt;String&gt; iterator = deque.iterator();
-while(iterator.hasNext()&#123;
-  String element = iterator.next();
-&#125;
-</code></pre>
-<p><font face="楷体" size=24><span style="background:#eef0f4;color:Chocolate">Queue的常用方法：</span></font></p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="left">throw Exception</th>
-<th align="left">返回false或null</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">添加元素到队尾</td>
-<td align="left">add(E e)</td>
-<td align="left">boolean offer(E e)</td>
-</tr>
-<tr>
-<td align="left">取队首元素并删除</td>
-<td align="left">E remove()</td>
-<td align="left">E poll()</td>
-</tr>
-<tr>
-<td align="left">取队首元素但不删除</td>
-<td align="left">E element()</td>
-<td align="left">E peek()</td>
-</tr>
-</tbody></table>
-
+<p>​		因为一般后台服务地址不会暴露，所以使用浏览器不能直接访问，可以把nginx作为请求访问的入口，请求到达nginx后转发到具体的服务中，从而保证后端服务的安全。</p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">接口导入：</span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227204244189.png" alt="image-20240227204244189"></p>
+<h3 id="功能一："><a href="#功能一：" class="headerlink" title="功能一："></a><span style="background:#eef0f4;color:MediumVioletRed">功能一：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">生成swagger：</span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227205707776.png" alt="image-20240227205707776"></p>
+<h3 id="功能二："><a href="#功能二：" class="headerlink" title="功能二："></a><span style="background:#eef0f4;color:MediumVioletRed">功能二：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工分页查询：</span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228215707819.png" alt="image-20240228215707819"></p>
+<h3 id="功能三："><a href="#功能三：" class="headerlink" title="功能三："></a><span style="background:#eef0f4;color:MediumVioletRed">功能三：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">新增员工：</span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228215804796.png" alt="image-20240228215804796"></p>
+<h3 id="功能四："><a href="#功能四：" class="headerlink" title="功能四："></a><span style="background:#eef0f4;color:MediumVioletRed">功能四：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工状态修改：</span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228220313912.png" alt="image-20240228220313912"></p>
+<h3 id="功能五："><a href="#功能五：" class="headerlink" title="功能五："></a><span style="background:#eef0f4;color:MediumVioletRed">功能五：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工信息修改：</span></font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240229171151828.png" alt="image-20240229171151828"></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="100" src="https://music.163.com/outchain/player?type=2&amp;id=1812257790&amp;auto=1&amp;height=100"></iframe>
     </div>
     
     

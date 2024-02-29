@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://real-jack.github.io/posts/0.html</loc>
+    <loc>https://real-jack.github.io/posts/938391b4.html</loc>
+    
+    <lastmod>2024-02-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://real-jack.github.io/posts/548e7b4d.html</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -56,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://real-jack.github.io/posts/c74c4101.html</loc>
+    <loc>https://real-jack.github.io/posts/413c7e08.html</loc>
     
     <lastmod>2024-01-04</lastmod>
     
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://real-jack.github.io/posts/413c7e08.html</loc>
+    <loc>https://real-jack.github.io/posts/c74c4101.html</loc>
     
     <lastmod>2024-01-04</lastmod>
     
@@ -148,6 +157,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://real-jack.github.io/tags/%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2024-02-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -159,6 +175,13 @@
   
   <url>
     <loc>https://real-jack.github.io/categories/Github/</loc>
+    <lastmod>2024-02-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://real-jack.github.io/categories/java%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2024-02-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
