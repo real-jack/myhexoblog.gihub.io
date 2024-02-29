@@ -190,17 +190,17 @@
             
             <span class="tag">
                 
-                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">学习</a>
+                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../tags/Java/" style="color: #03a9f4">Java</a>
+                <a href="../tags/Java/" style="color: #00bcd4">Java</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../tags/%E9%A1%B9%E7%9B%AE/" style="color: #ffa2c4">项目</a>
+                <a href="../tags/%E9%A1%B9%E7%9B%AE/" style="color: #00a596">项目</a>
             </span>
             
         </span>
@@ -208,7 +208,18 @@
     </div>
     
     <div class="content" v-pre>
-        <p><font face="楷体" size=5><span style="background:#eef0f4;color:SlateBlue">菜品展示：</span></font></p>
+        <p><font face="楷体" size=5><span style="background:#eef0f4;color:SlateBlue">代码优化：</span></font></p>
+<p><strong>问题：对于</strong>新增员工<strong>或者</strong>新增菜品分类<strong>，需要修改一些时间、用户等公共字段。怎么能统一处理来简化开发呢？</strong></p>
+<p><strong>答案：我们使用AOP切面编程，实现功能增强，来完成公共字段自动填充功能。</strong></p>
+<p><strong>实现步骤：</strong></p>
+<pre><code>
+1). 自定义注解 AutoFill，用于标识需要进行公共字段自动填充的方法
+
+2). 自定义切面类 AutoFillAspect，统一拦截加入了 AutoFill 注解的方法，通过反射为公共字段赋值
+
+3). 在 Mapper 的方法上加入 AutoFill 注解
+</code></pre>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:SlateBlue">菜品展示：</span></font></p>
 <p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240229203033532.png" alt="image-20240229203033532"></p>
 
     </div>
