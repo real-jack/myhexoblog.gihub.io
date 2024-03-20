@@ -4,12 +4,12 @@
 <head>
     <meta name="google-site-verification" content="0M_hgOGybpkDieOrvCMoikpQdEQoP3r64VSxWOy_syY" />
     <meta charset="utf-8" />
-    <title>Categories: 个人学习 | jack-hxb</title>
+    <title>设计模式——单例模式 | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="icon" href="../../images/avatar.jpg" />
+    <link rel="icon" href="../images/avatar.jpg" />
     <link rel="preconnect" href="https://cdn.staticfile.org" />
 <script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
 
@@ -29,17 +29,21 @@
     rel="stylesheet"
     href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
 />
-<script src="../../js/lib/highlight.js"></script>
+<script src="../js/lib/highlight.js"></script>
 
 
 
-<script src="../../js/lib/preview.js"></script>
+<script src="../js/lib/preview.js"></script>
 
 
 
 
 
-<link rel="stylesheet" href="../../css/main.css" />
+
+
+
+
+<link rel="stylesheet" href="../css/main.css" />
 
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body>
@@ -58,7 +62,7 @@
                 <div id="loading-circle">
                     <h2>LOADING</h2>
                     <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="../../images/loading.gif" />
+                    <img src="../images/loading.gif" />
                 </div>
             </div>
         </transition>
@@ -68,27 +72,27 @@
             <span>JACK-HXB</span>
         </a>
         
-        <a href="../../index.html">
+        <a href="../index.html">
             <i class="fa-solid fa-house fa-fw"></i>
             <span>&ensp;Home</span>
         </a>
         
-        <a href="../../about">
+        <a href="../about">
             <i class="fa-solid fa-id-card fa-fw"></i>
             <span>&ensp;About</span>
         </a>
         
-        <a href="../../archives">
+        <a href="../archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;Archives</span>
         </a>
         
-        <a href="../../categories">
+        <a href="../categories">
             <i class="fa-solid fa-bookmark fa-fw"></i>
             <span>&ensp;Categories</span>
         </a>
         
-        <a href="../../tags">
+        <a href="../tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
         </a>
@@ -102,7 +106,7 @@
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
                 
-                <a href="../../index.html">
+                <a href="../index.html">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
@@ -111,7 +115,7 @@
                     </div>
                 </a>
                 
-                <a href="../../about">
+                <a href="../about">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
@@ -120,7 +124,7 @@
                     </div>
                 </a>
                 
-                <a href="../../archives">
+                <a href="../archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-box-archive fa-fw"></i>
@@ -129,7 +133,7 @@
                     </div>
                 </a>
                 
-                <a href="../../categories">
+                <a href="../categories">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-bookmark fa-fw"></i>
@@ -138,7 +142,7 @@
                     </div>
                 </a>
                 
-                <a href="../../tags">
+                <a href="../tags">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-tags fa-fw"></i>
@@ -156,14 +160,20 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div class="article">
+    <div>
+        <h1>设计模式——单例模式</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/3/20
+        </span>
         
-        
-        
-        <span>
-            <a href="" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+        <span class="category">
+            <a href="../categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -172,388 +182,150 @@
         </span>
         
         
-        
-        
-        
-        <span>
-            <a href="../java%E9%A1%B9%E7%9B%AE/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                java项目
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="../Github/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Github
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="../%E9%9D%A2%E7%BB%8F/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                面经
-            </a>
-        </span>
-        
-        
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/3/20</div>
-            <a href="../../posts/1ca42a2e.html">
-                <h3>设计模式——单例模式</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p><font face="楷体" size=5><span style="background:#eef0f4;color:SeaGreen">为什么选择单例模式？</span></font></p>
+<p>​		单例模式主要是为了避免因为创建了多个实例造成资源的浪费，且多个实例由于多次调用容易导致结果出现错误，而使用单例模式能够保证整个应用中有且只有一个实例。从其名字中我们就可以看出所谓单例，就是单个实例也就是说它可以解决的问题是：可以保证一个类在内存中的对象的唯一性。</p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:SeaGreen">实现步骤</span></font></p>
+<ul>
+<li>私有化该类的构造函数</li>
+<li>通过new在本类中创建一个本类对象</li>
+<li>定义一个公有的方法，将在该类中所创建的对象返回</li>
+</ul>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:SeaGreen">单例模式的写法——饿汉式</span></font></p>
+<pre><code class="java">//饿汉式
+
+public class Singleton &#123;
+    private static Singleton instance=new Singleton();
+    private Singleton()&#123;&#125;;
+    public static Singleton getInstance()&#123;
+        return instance;
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">//另一种饿汉式
+
+public class Singleton&#123;
+    private static Singleton instance = null;
+    static &#123;
+        instance = new Singleton();
+    &#125;
+    private Singleton() &#123;&#125;;
+    public static Singleton getInstance() &#123;
+        return instance;
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li>访问方式</li>
+</ul>
+<pre><code class="java">Singleton instance = Singleton.getInstance();
+</code></pre>
+<ul>
+<li><font color="red">优点：</font></li>
+</ul>
+<p>​		从它的实现中我们可以看到，这种方式的实现比较简单，在类加载的时候就完成了实例化，避免了线程的同步问题。</p>
+<ul>
+<li><font color="red">缺点：</font></li>
+</ul>
+<p>​		由于在类加载的时候就实例化了，所以没有达到Lazy Loading(懒加载)的效果，也就是说可能我没有用到这个实例，但是它也会加载，会造成内存的浪费 （但是这个浪费可以忽略，所以这种方式也是推荐使用的）。</p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:SeaGreen">单例模式的写法——懒汉式（不推荐）</span></font></p>
+<pre><code>//懒汉式（线程不安全）
+
+public class Singleton &#123;
+    private static Singleton instance=null;
+    private Singleton() &#123;&#125;;
+    public static Singleton getInstance()&#123;
+        if(instance==null)&#123;
+            instance=new Singleton();
+        &#125;
+        return instance;
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li><font color="red">问题：</font></li>
+</ul>
+<p>​		有多个线程去调用getInstance方法来获取Singleton的实例，那么就有可能发生这样一种情况当第一个线程在执行if（instance&#x3D;&#x3D;null）这个语句时，此时instance是为null的进入语句。在还没有执行instance&#x3D;new Singleton（）时（此时instance是为null的），第二个线程也进入if（instance&#x3D;&#x3D;null）这个语句，因为之前进入这个语句的线程中还没有执行instance&#x3D;new Singleton（），所以它会执行instance&#x3D;new Singleton（）来实例化Singleton对象。因为第二个线程也进入了if语句，所以它也会实例化Singleton对象。这样就导致了实例化了两个Singleton对象。所以单例模式的懒汉式是存在线程安全问题的。</p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:SeaGreen">单例模式的写法——懒汉式双重校验锁</span></font></p>
+<pre><code class="java">public class Singleton &#123;
+    /**
+     * 懒汉式变种，属于懒汉式中最好的写法，保证了：延迟加载和线程安全
+     */
+    private static Singleton instance=null;
+    private Singleton() &#123;&#125;;
+    public static Singleton getInstance()&#123;
+         if (instance == null) &#123;  
+              synchronized (Singleton.class) &#123;  
+                  if (instance == null) &#123;  
+                	  instance = new Singleton();  
+                  &#125;  
+              &#125;  
+          &#125;  
+          return instance;  
+    &#125;
+&#125;
+</code></pre>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:SeaGreen">单例模式的写法——内部类</span></font></p>
+<pre><code class="java">public class Singleton&#123;
+    private Singleton() &#123;&#125;;
+    private static class SingletonHolder&#123;
+        private static Singleton instance=new Singleton();
+    &#125; 
+    public static Singleton getInstance()&#123;
+        return SingletonHolder.instance;
+    &#125;
+&#125;
+</code></pre>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:SeaGreen">单例模式的写法——枚举</span></font></p>
+<pre><code class="java">public enum SingletonEnum &#123;
+     instance; 
+     private SingletonEnum() &#123;&#125;
+     public void method()&#123;
+     &#125;
+&#125;
+</code></pre>
+<ul>
+<li>访问方式</li>
+</ul>
+<pre><code class="java">SingletonEnum.instance.method();
+</code></pre>
+<p><font face = "楷体" size=5 color="MediumOrchid">这代码，优雅，实在是太优雅了！</font></p>
+<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefined%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320215112.jpg" alt="微信图片_20240320215112"></p>
+
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/1/17</div>
-            <a href="../../posts/3635a217.html">
-                <h3>回溯法</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/Java/" style="color: #00a596">Java</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/1/9</div>
-            <a href="../../posts/345b9c12.html">
-                <h3>二叉树小结</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/Java/" style="color: #00bcd4">Java</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/1/8</div>
-            <a href="../../posts/4e5abcb0.html">
-                <h3>java中比较器的小结</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">学习</a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/Java/" style="color: #ffa2c4">Java</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
+
+    <script src="https://giscus.app/client.js"
+        data-repo="real-jack/giscus"
+        data-repo-id="R_kgDOK8VQHw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK8VQH84Cb6N2"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <!--PC版-->
+    <div id="SOHUCS" ></div>
+    <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+    <script type="text/javascript">
+    window.changyan.api.config({
+    appid: 'cyx5thFDP',
+    conf: 'prod_17c6fa7b70d536772234e05925db85b0'
+    });
+</script>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/1/3</div>
-            <a href="../../posts/cfc17fc4.html">
-                <h3>Queue、Deque小结</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">学习</a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/Java/" style="color: #ffa2c4">Java</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/12/27</div>
-            <a href="../../posts/2da0528d.html">
-                <h3>KMP算法</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/Java/" style="color: #00a596">Java</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/12/25</div>
-            <a href="../../posts/413c7e08.html">
-                <h3>hexo系列问题之我们换了电脑怎么办</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/hexo/" style="color: #ff7d73">hexo</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/12/21</div>
-            <a href="../../posts/c74c4101.html">
-                <h3>markdownlearn</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/hexo/" style="color: #ff7d73">hexo</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/12/20</div>
-            <a href="../../posts/25ba8e89.html">
-                <h3>Hello，Guests！</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        个人学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="../../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
     
 </div>
 
@@ -672,7 +444,13 @@
     <script src="/live2d-widget/autoload.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 
-    <script src="../../js/main.js"></script>
+    <script src="../js/main.js"></script>
+    
+    
+
+
+
+
     
 
     <p style="text-align:center" id="saintwei"></p>
