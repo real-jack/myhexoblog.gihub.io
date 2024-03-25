@@ -4,7 +4,7 @@
 <head>
     <meta name="google-site-verification" content="0M_hgOGybpkDieOrvCMoikpQdEQoP3r64VSxWOy_syY" />
     <meta charset="utf-8" />
-    <title>java项目——外卖——员工操作 | jack-hxb</title>
+    <title>缓存异常的三个问题 | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
@@ -162,22 +162,22 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>java项目——外卖——员工操作</h1>
+        <h1>缓存异常的三个问题</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/2/21
+            2024/3/25
         </span>
         
         <span class="category">
-            <a href="../categories/java%E9%A1%B9%E7%9B%AE/">
+            <a href="../categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                java项目
+                个人学习
             </a>
         </span>
         
@@ -190,17 +190,17 @@
             
             <span class="tag">
                 
-                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
+                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">学习</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../tags/Java/" style="color: #00a596">Java</a>
+                <a href="../tags/Java/" style="color: #ff7d73">Java</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../tags/%E9%A1%B9%E7%9B%AE/" style="color: #03a9f4">项目</a>
+                <a href="../tags/Redis/" style="color: #00bcd4">Redis</a>
             </span>
             
         </span>
@@ -208,41 +208,36 @@
     </div>
     
     <div class="content" v-pre>
-        <p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">项目Github地址：（同步更新中）</span></font></p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate"><a target="_blank" rel="noopener" href="https://github.com/real-jack/sky-take-out/tree/master">https://github.com/real-jack/sky-take-out/tree/master</a></span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedf59c366644684b6688d01c4b45f57021.png" alt="在这里插入图片描述"></p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">前端界面：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227171331826.png" alt="image-20240227171331826"></p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">前后端联调登录之后：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227172902482.png" alt="image-20240227172902482"></p>
-<p><strong>nginx 反向代理</strong>，就是将前端发送的动态请求由 nginx 转发到后端服务器。</p>
-<p><font face="楷体" size=4><span style="background:#eef0f4;color:Chocolate">那为什么不直接通过浏览器直接请求后台服务端，需要通过nginx反向代理呢？</span></font></p>
-<p><span style="background:#eef0f4;color:Maroon">nginx 反向代理的好处：</span></p>
+        <p><font face="楷体" size=5><span style="background:#eef0f4;color:Purple">Redis是什么</span></font></p>
+<p>​		<code>Redis</code>（<strong>RE</strong>mote <strong>DI</strong>ctionary <strong>S</strong>erver）是一个基于 C 语言开发的开源<code> NoSQL</code> 数据库（BSD 许可）。与传统数据库不同的是，<code>Redis</code> 的数据是保存在<code>内存</code>中的（内存数据库，支持持久化），因此读写速度非常快，被广泛应用于分布式缓存方向。并且，Redis 存储的是 <code>KV </code>键值对数据。</p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:Purple">Redis常用数据类型</span></font></p>
 <ul>
-<li><font color="red">提高访问速度</font></li>
+<li><p><strong>5 种基础数据类型</strong>：<code>String</code>（字符串）、<code>List</code>（列表）、<code>Set</code>（集合）、<code>Hash</code>（散列）、<code>Zset</code>（有序集合）。</p>
+</li>
+<li><p><strong>3 种特殊数据类型</strong>：<code>HyperLogLog</code>（基数统计）、<code>Bitmap</code> （位图）、<code>Geospatial</code> (地理位置)。</p>
+</li>
 </ul>
-<p>​		因为nginx本身可以进行缓存，如果访问的同一接口，并且做了数据缓存，nginx就直接可把数据返回，不需要真正地访问服务端，从而提高访问速度。</p>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:Purple">Redis缓存异常的三个问题</span></font></p>
 <ul>
-<li><font color="red">进行负载均衡</font></li>
+<li><p><strong>缓存穿透：</strong></p>
+<p>​		是指<strong>缓存和数据库中都没有数据</strong>，导致所有的请求都落到数据库上，数据库短时间承受大量的请求而崩掉。</p>
+<p><font color="PaleVioletRed"><strong>解决方法：</strong></font><br>    1、缓存取不到，数据库也取不到的数据，设置为<code>key—null</code> 的方式；<br>    2、布隆过滤器，将所有可能存在的数据哈希到一个足够大的<code>bitmap </code>中去（它告诉你存在的话不能全信，其实有可能是不存在的，不过它他要是告诉你不存在的话，那就一定不存在）。</p>
+</li>
+<li><p><strong>缓存击穿：</strong></p>
+<p>​		<strong>高并发查询同一条数据</strong>，但是<code>redis </code>中的数据过期了，导致请求发送到了数据库，造成缓存击穿。</p>
+<p><font color="PaleVioletRed"><strong>解决方法：</strong></font></p>
+<p>​		1、设置热点数据永不过期；<br>​		2、使用互斥锁。分布式情况下使用分布式的锁。</p>
+</li>
+<li><p><strong>缓存雪崩：</strong></p>
+<p>​		缓存<strong>同一时间大面积的失效</strong>，后面的请求都会落到数据库上，造成数据库短时间内承受大量的数据请求。</p>
+<p><font color="PaleVioletRed"><strong>解决方法：</strong></font>（缓存击穿的两种方法也可以）</p>
+<p>​		1、缓存数据的过期时间随机设置，防止同一时间大量的数据过期的情况发生。</p>
+</li>
 </ul>
-<p>​		所谓负载均衡,就是把大量的请求按照我们指定的方式均衡的分配给集群中的每台服务器。</p>
-<ul>
-<li><font color="red">保证后端服务安全</font></li>
-</ul>
-<p>​		因为一般后台服务地址不会暴露，所以使用浏览器不能直接访问，可以把nginx作为请求访问的入口，请求到达nginx后转发到具体的服务中，从而保证后端服务的安全。</p>
-<p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">接口导入：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227204244189.png" alt="image-20240227204244189"></p>
-<h3 id="功能一："><a href="#功能一：" class="headerlink" title="功能一："></a><span style="background:#eef0f4;color:MediumVioletRed">功能一：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">生成swagger：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240227205707776.png" alt="image-20240227205707776"></p>
-<h3 id="功能二："><a href="#功能二：" class="headerlink" title="功能二："></a><span style="background:#eef0f4;color:MediumVioletRed">功能二：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工分页查询：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228215707819.png" alt="image-20240228215707819"></p>
-<h3 id="功能三："><a href="#功能三：" class="headerlink" title="功能三："></a><span style="background:#eef0f4;color:MediumVioletRed">功能三：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">新增员工：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228215804796.png" alt="image-20240228215804796"></p>
-<h3 id="功能四："><a href="#功能四：" class="headerlink" title="功能四："></a><span style="background:#eef0f4;color:MediumVioletRed">功能四：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工状态修改：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240228220313912.png" alt="image-20240228220313912"></p>
-<h3 id="功能五："><a href="#功能五：" class="headerlink" title="功能五："></a><span style="background:#eef0f4;color:MediumVioletRed">功能五：</span></h3><p><font face="楷体" size=5><span style="background:#eef0f4;color:Chocolate">员工信息修改：</span></font></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20240229171151828.png" alt="image-20240229171151828"></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="100" src="https://music.163.com/outchain/player?type=2&amp;id=1812257790&amp;auto=1&amp;height=100"></iframe>
+<p><font face="楷体" size=5><span style="background:#eef0f4;color:Purple">Redis缓存作用</span></font></p>
+<p>​		简单点来说，就是优化客户端请求数据时，服务端的查询速度。</p>
+<p>​		如果能在缓存中命中数据，那就查询缓存，不用再去查询数据库，从而减轻数据库的压力，提高服务器的性能。</p>
+
     </div>
     
     
