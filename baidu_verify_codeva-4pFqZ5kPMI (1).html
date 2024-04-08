@@ -5,12 +5,12 @@
     
     <meta name="google-site-verification" content="0M_hgOGybpkDieOrvCMoikpQdEQoP3r64VSxWOy_syY" />
     <meta charset="utf-8" />
-    <title>leetcode-206题反转链表的输出的问题 | jack-hxb</title>
+    <title> | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="icon" href="../images/avatar.jpg" />
+    <link rel="icon" href="/images/avatar.jpg" />
     <link rel="preconnect" href="https://cdn.staticfile.org" />
 <script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
 
@@ -30,21 +30,21 @@
     rel="stylesheet"
     href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
 />
-<script src="../js/lib/highlight.js"></script>
+<script src="/js/lib/highlight.js"></script>
 
 
 
-<script src="../js/lib/preview.js"></script>
-
-
-
-
+<script src="/js/lib/preview.js"></script>
 
 
 
 
 
-<link rel="stylesheet" href="../css/main.css" />
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
 
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body>
@@ -63,7 +63,7 @@
                 <div id="loading-circle">
                     <h2>LOADING</h2>
                     <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="../images/loading.gif" />
+                    <img src="/images/loading.gif" />
                 </div>
             </div>
         </transition>
@@ -73,27 +73,27 @@
             <span>JACK-HXB</span>
         </a>
         
-        <a href="../index.html">
+        <a href="index.html">
             <i class="fa-solid fa-house fa-fw"></i>
             <span>&ensp;Home</span>
         </a>
         
-        <a href="../about">
+        <a href="/about">
             <i class="fa-solid fa-id-card fa-fw"></i>
             <span>&ensp;About</span>
         </a>
         
-        <a href="../archives">
+        <a href="/archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;Archives</span>
         </a>
         
-        <a href="../categories">
+        <a href="/categories">
             <i class="fa-solid fa-bookmark fa-fw"></i>
             <span>&ensp;Categories</span>
         </a>
         
-        <a href="../tags">
+        <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
         </a>
@@ -107,7 +107,7 @@
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
                 
-                <a href="../index.html">
+                <a href="index.html">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
@@ -116,7 +116,7 @@
                     </div>
                 </a>
                 
-                <a href="../about">
+                <a href="/about">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
@@ -125,7 +125,7 @@
                     </div>
                 </a>
                 
-                <a href="../archives">
+                <a href="/archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-box-archive fa-fw"></i>
@@ -134,7 +134,7 @@
                     </div>
                 </a>
                 
-                <a href="../categories">
+                <a href="/categories">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-bookmark fa-fw"></i>
@@ -143,7 +143,7 @@
                     </div>
                 </a>
                 
-                <a href="../tags">
+                <a href="/tags">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-tags fa-fw"></i>
@@ -163,93 +163,21 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>leetcode-206题反转链表的输出的问题</h1>
+        <h1></h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/12/29
+            2024/4/8
         </span>
         
-        <span class="category">
-            <a href="../categories/Github/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Github
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="../tags/Java/" style="color: #ff7d73">Java</a>
-            </span>
-            
-        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <p>最近在leetcode做206这个反转链表的时候，发现最终输出newH.next的时候有点问题，特此记录一下。</p>
-<span id="more"></span>
-
-<p>先看题目：</p>
-<p><strong>206.反转链表</strong></p>
-<p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
-<p><strong>示例1：</strong></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedrev1ex1.jpg" alt="img"></p>
-<pre><code>输入：head = [1,2,3,4,5]
-输出：[5,4,3,2,1]
-</code></pre>
-<p><strong>示例2：</strong></p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedrev1ex2.jpg" alt="img"></p>
-<pre><code>输入：head = [1,2]
-输出：[2,1]
-</code></pre>
-<h4 id="我的正常答案：（双指针法）"><a href="#我的正常答案：（双指针法）" class="headerlink" title="我的正常答案：（双指针法）"></a><span style="background:#eef0f4;color:blue">我的正常答案：（双指针法）</span></h4><pre><code class="java">/**
- * Definition for singly-linked list.
- * public class ListNode &#123;
- *     int val;
- *     ListNode next;
- *     ListNode() &#123;&#125;
- *     ListNode(int val) &#123; this.val = val; &#125;
- *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;
- * &#125;
- */
-class Solution &#123;
-    public ListNode reverseList(ListNode head) &#123;
-        ListNode pre = null, cur = head;
-        ListNode tmp;
-        while(cur != null)&#123;
-            tmp = cur.next;
-            cur.next = pre;
-            pre = cur;
-            cur = tmp;
-        &#125;
-        return pre;
-    &#125;
-&#125;
-</code></pre>
-<h3 id="但是，有意思的事情发生了，当我尝试的返回pre-next，它却返回的是null？"><a href="#但是，有意思的事情发生了，当我尝试的返回pre-next，它却返回的是null？" class="headerlink" title="但是，有意思的事情发生了，当我尝试的返回pre.next，它却返回的是null？"></a><span style="background:#eef0f4;color:red">但是，有意思的事情发生了，当我尝试的返回<code>pre.next</code>，它却返回的是null？</span></h3><p>按我的个人理解，这当然是一个错误答案，但正确的返回应该是排除最后一个节点以外的剩余节点的倒序，也不应该是null啊。</p>
-<h4 id="比如：return-pre就应该是5-4-3-2-1-null的话，return-pre-next就应该是4-3-2-1-null。"><a href="#比如：return-pre就应该是5-4-3-2-1-null的话，return-pre-next就应该是4-3-2-1-null。" class="headerlink" title="比如：return pre就应该是5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;null的话，return pre.next就应该是4-&gt;3-&gt;2-&gt;1-&gt;null。"></a>比如：<code>return pre</code>就应该是<code>5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;null</code>的话，<code>return pre.next</code>就应该是<code>4-&gt;3-&gt;2-&gt;1-&gt;null</code>。</h4><p>个人觉得很有意思，回去后和室友讨论了一下，觉得确实有点问题，把问题跟<code>leetcode</code>反馈了一下，目前还没有回复。</p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefinedimage-20231229111250616.png" alt="image-20231229111250616"></p>
-<h3 id="事情更新一下，初步的怀疑是因为leetcode的检查机制是重新一路next返回整个链表，而我返回的pre-next最终会在头结点处返回空值null，这样就能解释了。"><a href="#事情更新一下，初步的怀疑是因为leetcode的检查机制是重新一路next返回整个链表，而我返回的pre-next最终会在头结点处返回空值null，这样就能解释了。" class="headerlink" title="事情更新一下，初步的怀疑是因为leetcode的检查机制是重新一路next返回整个链表，而我返回的pre.next最终会在头结点处返回空值null，这样就能解释了。"></a><span style="background:#eef0f4;color:red">事情更新一下，初步的怀疑是因为leetcode的检查机制是重新一路next返回整个链表，而我返回的<code>pre.next</code>最终会在头结点处返回空值<code>null</code>，这样就能解释了。</span></h3><p>附上代码随想录的反转链表过程示意图（画的太漂亮了）：</p>
-<p><img src="https://real-jack.oss-cn-beijing.aliyuncs.com/undefined206.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.gif" alt="206.翻转链表"></p>
-
+        0df0e7f979a74968972d21e3783115ab
     </div>
     
     
@@ -400,7 +328,7 @@ class Solution &#123;
     <script src="/live2d-widget/autoload.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
     
     
 
