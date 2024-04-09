@@ -191,12 +191,12 @@
             
             <span class="tag">
                 
-                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #00bcd4">学习</a>
+                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">学习</a>
             </span>
             
             <span class="tag">
                 
-                <a href="../tags/hexo/" style="color: #00a596">hexo</a>
+                <a href="../tags/hexo/" style="color: #00bcd4">hexo</a>
             </span>
             
         </span>
@@ -276,6 +276,23 @@ alert(&#39;Hello World!&#39;);</code></pre>
     
     
     
+
+    {% if theme.baidu_push %}
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+    {% endif %}
 
     <script src="https://giscus.app/client.js"
         data-repo="real-jack/giscus"
