@@ -5,7 +5,7 @@
     <meta name="baidu-site-verification" content="codeva-KC4NbD5gPm" />
     <meta name="google-site-verification" content="0M_hgOGybpkDieOrvCMoikpQdEQoP3r64VSxWOy_syY" />
     <meta charset="utf-8" />
-    <title>categories | jack-hxb</title>
+    <title>图论——并查集 | jack-hxb</title>
     <meta name="author" content="jack-hxb" />
     <meta name="description" content="内容coming soon！" />
     <meta name="keywords" content="" />
@@ -35,6 +35,10 @@
 
 
 <script src="../js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -157,14 +161,20 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div class="article">
+    <div>
+        <h1>图论——并查集</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/4/23
+        </span>
         
-        
-        
-        <span>
-            <a href="%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" style="background: #00a596">
+        <span class="category">
+            <a href="../categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -173,40 +183,142 @@
         </span>
         
         
-        
-        <span>
-            <a href="java%E9%A1%B9%E7%9B%AE/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                java项目
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="../tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">学习</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="../tags/Java/" style="color: #ff7d73">Java</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="../tags/%E5%9B%BE%E8%AE%BA/" style="color: #03a9f4">图论</a>
+            </span>
+            
         </span>
-        
-        
-        
-        <span>
-            <a href="Github/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Github
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="%E9%9D%A2%E7%BB%8F/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                面经
-            </a>
-        </span>
-        
         
     </div>
+    
+    <div class="content" v-pre>
+        <p><font face="楷体" size=6><span style="background:#eef0f4;color:Sienna">并查集：</span></font></p>
+<p>一个简单的leetcode图论题为例：<code>1971. 寻找图中是否存在路径</code></p>
+<pre><code class="java">class Solution &#123;
+
+    int[] father;
+    public boolean validPath(int n, int[][] edges, int source, int destination) &#123;
+        father = new int[n];
+        init();
+        for (int i = 0; i &lt; edges.length; i++) &#123;
+            join(edges[i][0], edges[i][1]);
+        &#125;
+
+        return isSame(source, destination);
+    &#125;
+
+    // 并查集初始化
+    public void init() &#123;
+        for (int i = 0; i &lt; father.length; i++) &#123;
+            father[i] = i;
+        &#125;
+    &#125;
+
+    // 并查集里寻根的过程
+    public int find(int u) &#123;
+        if (u == father[u]) &#123;
+            return u;
+        &#125; else &#123;
+            father[u] = find(father[u]);
+            return father[u];
+        &#125;
+    &#125;
+
+    // 判断 u 和 v是否找到同一个根
+    public boolean isSame(int u, int v) &#123;
+        u = find(u);
+        v = find(v);
+        return u == v;
+    &#125;
+
+    // 将v-&gt;u 这条边加入并查集
+    public void join(int u, int v) &#123;
+        u = find(u); // 寻找u的根
+        v = find(v); // 寻找v的根
+        if (u == v) return; // 如果发现根相同，则说明在一个集合，不用两个节点相连直接返回
+
+        father[v] = u;
+    &#125;
+
+&#125;
+</code></pre>
+<p><font face="楷体" size=6><span style="background:#eef0f4;color:Sienna">并查集函数功能：</span></font></p>
+<p>并查集主要有三个功能。</p>
+<ul>
+<li><p>寻找根节点，函数：<code>find(int u)</code>，也就是判断这个节点的祖先节点是哪个；</p>
+</li>
+<li><p>将两个节点接入到同一个集合，函数：<code>join(int u, int v)</code>，将两个节点连在同一个根节点上；</p>
+</li>
+<li><p>判断两个节点是否在同一个集合，函数：<code>isSame(int u, int v)</code>，就是判断两个节点是不是同一个根节点。</p>
+</li>
+</ul>
+
+    </div>
+    
+    
+    
+
+    {% if theme.baidu_push %}
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+    {% endif %}
+
+    <script src="https://giscus.app/client.js"
+        data-repo="real-jack/giscus"
+        data-repo-id="R_kgDOK8VQHw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOK8VQH84Cb6N2"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <!--PC版-->
+    <div id="SOHUCS" ></div>
+    <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+    <script type="text/javascript">
+    window.changyan.api.config({
+    appid: 'cyx5thFDP',
+    conf: 'prod_17c6fa7b70d536772234e05925db85b0'
+    });
+</script>
+    
+    
+    
     
 </div>
 
@@ -326,6 +438,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 
     <script src="../js/main.js"></script>
+    
+    
+
+
+
+
     
 
     <p style="text-align:center" id="saintwei"></p>
