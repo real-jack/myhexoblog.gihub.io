@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://real-jack.github.io/
+url: http://www.real-jack.top
 permalink: posts/:abbrlink.html
 abbrlink:
   alg: crc32
@@ -110,7 +110,8 @@ deploy:
   type: git
   repository: https://github.com/real-jack/real-jack.github.io
   branch: main
-  token: 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
+  token: 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
+
 
 # Sitemap Generator
 
@@ -119,4 +120,14 @@ sitemap:
   tags: true
   categories: true
 
+baidusitemap: 
+  path: baidusitemap.xml
+
+ 
+ # 百度主动推送插件
+baidu_url_submit:
+   count: 80             # 提交最新的一个链接
+   host: www.real-jack.top    # 你的域名
+   token: HY6qAONI7RtaIkwC      
+   path: baidu_urls.txt  # 文本文档的地址，新链接会保存在此文本文档里
 
